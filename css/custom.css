@@ -1,0 +1,39 @@
+.standard {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.hero {
+    width: 100vw;
+}
+
+.hero-body {
+    width: 100vw;
+    margin: auto;
+}
+
+#words {
+    margin: auto;
+}
+
+#top {
+    font-size: 3vmin;
+}
+
+#telele {
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 7vmin;
+}
+
+#mid {
+    font-size: 3vmin;
+}
+
+#word {
+    font-family: 'Playfair Display', serif;
+    font-size: 13vmin;
+}
+
+#coffee {
+    margin-top: 10px;
+}
