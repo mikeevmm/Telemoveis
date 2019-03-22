@@ -83,20 +83,16 @@ known_exceptions = {
     'coma': {
         'plural':   false,
         'fem':      false,
-        'plural':   'comas',
     },
     'jovialidade': {
         'plural':   false,
         'fem':      true,
-        'plural':   'jovialidades',
     }
 };
 if (to_word in known_exceptions) {
     exception = known_exceptions[to_word];
     plural = exception['plural'];
     fem = exception['fem'];
-    article = exception['article'];
-    plural = exception['plural'];
 } else {
     plural = to_word[to_word.length - 1] == 's';
     term = plural ? to_word[to_word.length - 2] : to_word[to_word.length - 1];
