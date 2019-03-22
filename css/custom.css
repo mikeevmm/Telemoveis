@@ -34,6 +34,26 @@
     font-size: 13vmin;
 }
 
+#lyrics {
+    margin: auto;
+    max-width: 80vw;
+    overflow: auto;
+}
+
+.footer {
+    padding-left: 0%;
+    padding-right: 0%;
+}
+
+#footer-content {
+    width: 100%;
+    margin: auto;
+}
+
+#footer-content * {
+    margin: auto;
+}
+
 #coffee {
     margin-top: 10px;
 }
