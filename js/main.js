@@ -100,7 +100,7 @@ if (to_word in known_exceptions) {
 } else {
     plural = to_word[to_word.length - 1] == 's'
     term = plural ? to_word[to_word.length - 2] : to_word[to_word.length - 1];
-    fem = term == 'a' || term == 'ã';
+    fem = (term == 'a' || term == 'ã' || (term == 'z' && to_word[to_word.length - 2] == 'e'));
 }
 article = fem ? 'a' : 'o';
 if (plural) article += 's';
