@@ -79,9 +79,29 @@ function list_sample(list) {
 // Find word to replace with
 to_word = list_sample(substantivos);
 // ¯\_(ツ)_/¯ approach
-plural = to_word[to_word.length - 1] == 's'
-term = plural ? to_word[to_word.length - 2] : to_word[to_word.length - 1];
-fem = term == 'a' || term == 'ã';
+known_exceptions = {
+    'coma': {
+        'plural':   false,
+        'fem':      false,
+        'plural':   'comas',
+    },
+    'jovialidade': {
+        'plural':   false,
+        'fem':      true,
+        'plural':   'jovialidades',
+    }
+};
+if (to_word in known_exceptions) {
+    exception = known_exceptions[to_word];
+    plural = exception['plural'];
+    fem = exception['fem'];
+    article = exception['article'];
+    plural = exception['plural'];
+} else {
+    plural = to_word[to_word.length - 1] == 's'
+    term = plural ? to_word[to_word.length - 2] : to_word[to_word.length - 1];
+    fem = term == 'a' || term == 'ã';
+}
 article = fem ? 'a' : 'o';
 if (plural) article += 's';
 article_word = article + ' ' + to_word;
