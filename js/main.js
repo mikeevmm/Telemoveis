@@ -128,6 +128,8 @@ new_lyrics = new_lyrics.replace(/o meu/gi, article + ' ' + eu_poss).replace(/o t
 $(document).ready(function () {
     // Show new word
     $('#word').text(to_word + '?');
+    // Link to dictionary definition
+    $('#word-link').attr('href', 'https://dicionario.priberam.org/' + to_word);
     // Update lyrics
     $('#lyrics').text(new_lyrics);
 });

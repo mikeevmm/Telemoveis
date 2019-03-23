@@ -34,6 +34,11 @@
     font-size: 13vmin;
 }
 
+#word-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
 #lyrics {
     margin: auto;
     max-width: 80vw;
