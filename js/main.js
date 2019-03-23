@@ -84,10 +84,6 @@ known_exceptions = {
         'plural':   false,
         'fem':      false,
     },
-    'jovialidade': {
-        'plural':   false,
-        'fem':      true,
-    }
 };
 if (to_word in known_exceptions) {
     exception = known_exceptions[to_word];
@@ -97,6 +93,7 @@ if (to_word in known_exceptions) {
     plural = to_word[to_word.length - 1] == 's';
     term = plural ? to_word[to_word.length - 2] : to_word[to_word.length - 1];
     fem = (term == 'a' || term == 'ã' || (term == 'z' && to_word[to_word.length - 2] == 'e'));
+    if (to_word.match(/dade$/i)) fem = true;
 }
 article = fem ? 'a' : 'o';
 if (plural) article += 's';
