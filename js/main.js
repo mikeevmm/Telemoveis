@@ -91,9 +91,7 @@ if (to_word in known_exceptions) {
     fem = exception['fem'];
 } else {
     plural = to_word[to_word.length - 1] == 's';
-    term = plural ? to_word[to_word.length - 2] : to_word[to_word.length - 1];
-    fem = (term == 'a' || term == 'ã' || (term == 'z' && to_word[to_word.length - 2] == 'e'));
-    if (to_word.match(/dade$/i)) fem = true;
+    fem = !!(to_word.match(/(a|ã|ez|dade)s?$/));
 }
 article = fem ? 'a' : 'o';
 if (plural) article += 's';
