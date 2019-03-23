@@ -39,6 +39,14 @@
     text-decoration: inherit;
 }
 
+#ora-ve {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    width: 100%;
+    bottom: 2px;
+}
+
 #lyrics {
     margin: auto;
     max-width: 80vw;
