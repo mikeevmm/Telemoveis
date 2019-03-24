@@ -91,15 +91,14 @@ if (to_word in known_exceptions) {
     fem = exception['fem'];
 } else {
     plural = to_word[to_word.length - 1] == 's';
-    fem = !!(to_word.match(/(a|ã|ez|dade)s?$/));
+    fem = !!(to_word.match(/(a|ã|ez|dade|gem)s?$/i));
 }
 article = fem ? 'a' : 'o';
 if (plural) article += 's';
 article_word = article + ' ' + to_word;
 
 // Updated lyrics
-new_lyrics = lyrics.replace(/o telemóvel|o telele|telemóveis/gi, article_word)
-                   .replace(/ãos/gi, 'ões');
+new_lyrics = lyrics.replace(/o telemóvel|o telele|telemóveis/gi, article_word);
 if (fem) {
     if (plural) {
         eu_poss = 'minhas';
