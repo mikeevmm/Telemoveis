@@ -71,3 +71,11 @@
 #coffee {
     margin-top: 10px;
 }
+
+#coffee img {
+    width: 10em;
+}
+
+#coffee img:hover {
+    opacity: .8;
+}
